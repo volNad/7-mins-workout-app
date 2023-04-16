@@ -30,8 +30,11 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         setContentView(binding?.root)
 
         binding?.ivCancelSpeaker?.setOnClickListener {
-            turnOutSpeaker()
             speakerAvailability = false
+        }
+
+        binding?.ivAcceptSpeaker?.setOnClickListener {
+            speakerAvailability = true
         }
 
         setSupportActionBar(binding?.toolbarExercise)
@@ -169,9 +172,6 @@ class ExerciseActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null, "")
     }
 
-    private fun turnOutSpeaker() {
-        tts!!.stop()
-        tts!!.shutdown()
-    }
+
 
 }
