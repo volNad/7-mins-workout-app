@@ -14,7 +14,20 @@
         android:layout_height="?android:attr/actionBarSize"
         android:background="@color/white"
         app:titleTextColor="@color/colorPrimary"
-        />
+        >
+
+        <ImageButton
+            android:id="@+id/ivCancelSpeaker"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="end"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/ic_turn_off_sound"
+            android:backgroundTint="@color/lightGrey"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
 
     <TextView
         android:id="@+id/tvTitle"
