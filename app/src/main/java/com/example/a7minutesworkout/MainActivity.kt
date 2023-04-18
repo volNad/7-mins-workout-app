@@ -16,14 +16,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
 
         binding?.flStart?.setOnClickListener {
-            Toast.makeText(this@MainActivity,
-                "YES",
-                Toast.LENGTH_LONG)
-                .show()
-
             val intent = Intent(this, ExerciseActivity::class.java)
             startActivity(intent)
+        }
 
+        binding?.flBMI?.setOnClickListener{
+            val intent = Intent(this, CalculatorActivity::class.java)
+            startActivity(intent)
         }
 
     }

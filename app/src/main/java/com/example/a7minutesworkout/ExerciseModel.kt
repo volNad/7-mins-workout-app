@@ -11,7 +11,7 @@ class ExerciseModel (
         return id
     }
 
-    fun setId() {
+    fun setId(id: Int) {
         this.id = id
     }
 
@@ -19,7 +19,7 @@ class ExerciseModel (
         return name
     }
 
-    fun setName() {
+    fun setName(name: String) {
         this.name = name
     }
 
@@ -27,7 +27,7 @@ class ExerciseModel (
         return image
     }
 
-    fun setImage() {
+    fun setImage(image: Int) {
         this.image = image
     }
 
@@ -35,7 +35,7 @@ class ExerciseModel (
         return isCompleted
     }
 
-    fun setIsCompleted() {
+    fun setIsCompleted(isCompleted: Boolean) {
         this.isCompleted = isCompleted
     }
 
@@ -43,7 +43,7 @@ class ExerciseModel (
         return isSelected
     }
 
-    fun setIsSelected() {
+    fun setIsSelected(isSelected: Boolean) {
         this.isSelected = isSelected
     }
 }

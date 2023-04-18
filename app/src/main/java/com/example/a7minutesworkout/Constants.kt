@@ -32,7 +32,7 @@ object Constants {
 
         val abdominalCrunch = ExerciseModel(
             4,
-            "Wall sit",
+            "Abdominal Crunch",
             R.drawable.ic_abdominal_crunch,
             false,
             false

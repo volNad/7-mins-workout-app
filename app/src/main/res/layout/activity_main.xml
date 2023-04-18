@@ -16,7 +16,7 @@
         android:layout_height="220dp"
         android:contentDescription="@string/image"
         android:src="@drawable/img_main_page"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="60dp"
         />
 
     <FrameLayout
@@ -27,7 +27,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:background="@drawable/item_color_accent_border_ripple_background"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="70dp"
         >
 
         <TextView
@@ -41,5 +41,44 @@
             />
         
 </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flBMI"
+        app:layout_constraintTop_toBottomOf="@id/flStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/item_cilcular_color_accent_background"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BMI"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/default_button_text_size"
+            android:textStyle="bold"
+            />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Calculator"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/default_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flBMI"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
