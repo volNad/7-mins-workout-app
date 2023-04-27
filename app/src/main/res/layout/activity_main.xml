@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@id/flStart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/flCalendar"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:background="@drawable/item_cilcular_color_accent_background"
@@ -76,9 +76,49 @@
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/default_button_text_size"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/flBMI"
+        app:layout_constraintStart_toStartOf="@id/flBMI"
         app:layout_constraintTop_toBottomOf="@id/flBMI"
+        />
+
+    <FrameLayout
+        android:id="@+id/flCalendar"
+        app:layout_constraintTop_toBottomOf="@id/flStart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/flBMI"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/item_cilcular_color_accent_background"
+        android:layout_gravity = "center"
+        android:gravity = "center"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src = "@drawable/ic_calendar"
+            android:layout_gravity="center"
+            />
+
+
+
+    </FrameLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="History"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/default_button_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/flCalendar"
+        app:layout_constraintStart_toStartOf="@id/flCalendar"
+        app:layout_constraintTop_toBottomOf="@id/flCalendar"
         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

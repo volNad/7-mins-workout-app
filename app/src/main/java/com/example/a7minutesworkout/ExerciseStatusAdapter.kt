@@ -7,41 +7,46 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.a7minutesworkout.databinding.ItemExerciseStatusBinding
 
-class ExerciseStatusAdapter(private val items: ArrayList<ExerciseModel>):
+class ExerciseStatusAdapter(private val items: ArrayList<ExerciseModel>) :
     RecyclerView.Adapter<ExerciseStatusAdapter.ViewHolder>() {
 
-        class ViewHolder(binding: ItemExerciseStatusBinding):
-            RecyclerView.ViewHolder(binding.root) {
-                val tvItem = binding.tvItem
-            }
+    class ViewHolder(binding: ItemExerciseStatusBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        val tvItem = binding.tvItem
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemExerciseStatusBinding
-            .inflate(LayoutInflater.from(parent.context), parent, false))
+        return ViewHolder(
+            ItemExerciseStatusBinding
+                .inflate(LayoutInflater.from(parent.context), parent, false)
+        )
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val model : ExerciseModel = items[position]
+        val model: ExerciseModel = items[position]
         holder.tvItem.text = model.getId().toString()
 
         when {
             model.getIsSelected() -> {
                 holder.tvItem.background =
-                    ContextCompat.getDrawable(holder.itemView.context,
-                     R.drawable.item_circular_color_thin_accent_border
-                )
+                    ContextCompat.getDrawable(
+                        holder.itemView.context,
+                        R.drawable.item_circular_color_thin_accent_border
+                    )
                 holder.tvItem.setTextColor(Color.parseColor("#212121"))
             }
             model.getIsCompleted() -> {
                 holder.tvItem.background =
-                    ContextCompat.getDrawable(holder.itemView.context,
+                    ContextCompat.getDrawable(
+                        holder.itemView.context,
                         R.drawable.item_cilcular_color_accent_background
                     )
                 holder.tvItem.setTextColor(Color.parseColor("#FFFFFFFF"))
             }
             else -> {
                 holder.tvItem.background =
-                    ContextCompat.getDrawable(holder.itemView.context,
+                    ContextCompat.getDrawable(
+                        holder.itemView.context,
                         R.drawable.item_circular_color_grey_background
                     )
                 holder.tvItem.setTextColor(Color.parseColor("#212121"))

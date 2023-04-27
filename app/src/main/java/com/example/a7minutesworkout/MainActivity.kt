@@ -3,12 +3,11 @@ package com.example.a7minutesworkout
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import com.example.a7minutesworkout.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private var binding : ActivityMainBinding? = null
+    private var binding: ActivityMainBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +19,13 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding?.flBMI?.setOnClickListener{
+        binding?.flBMI?.setOnClickListener {
             val intent = Intent(this, CalculatorActivity::class.java)
+            startActivity(intent)
+        }
+
+        binding?.flCalendar?.setOnClickListener {
+            val intent = Intent(this@MainActivity, HistoryActivity::class.java)
             startActivity(intent)
         }
 

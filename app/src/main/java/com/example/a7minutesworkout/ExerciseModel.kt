@@ -1,13 +1,13 @@
 package com.example.a7minutesworkout
 
-class ExerciseModel (
+class ExerciseModel(
     private var id: Int,
     private var name: String,
     private var image: Int,
     private var isCompleted: Boolean,
     private var isSelected: Boolean
 ) {
-    fun getId(): Int{
+    fun getId(): Int {
         return id
     }
 
@@ -15,7 +15,7 @@ class ExerciseModel (
         this.id = id
     }
 
-    fun getName(): String{
+    fun getName(): String {
         return name
     }
 
@@ -23,7 +23,7 @@ class ExerciseModel (
         this.name = name
     }
 
-    fun getImage(): Int{
+    fun getImage(): Int {
         return image
     }
 
@@ -31,7 +31,7 @@ class ExerciseModel (
         this.image = image
     }
 
-    fun getIsCompleted(): Boolean{
+    fun getIsCompleted(): Boolean {
         return isCompleted
     }
 
@@ -39,7 +39,7 @@ class ExerciseModel (
         this.isCompleted = isCompleted
     }
 
-    fun getIsSelected(): Boolean{
+    fun getIsSelected(): Boolean {
         return isSelected
     }
 
